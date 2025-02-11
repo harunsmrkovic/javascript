@@ -1,5 +1,32 @@
 # @clerk/vue
 
+## 1.1.12
+
+### Patch Changes
+
+- Adds ability to render custom `<UserProfile>` links inside `<UserButton>` component. ([#5128](https://github.com/clerk/javascript/pull/5128)) by [@wobsoriano](https://github.com/wobsoriano)
+
+  Example:
+
+  ```vue
+  <script setup>
+  import { UserButton } from '@clerk/vue';
+  </script>
+
+  <template>
+    <UserButton>
+      <UserButton.UserProfileLink
+        label="Homepage"
+        url="/"
+      >
+        <template #labelIcon>
+          <div>Icon</div>
+        </template>
+      </UserButton.UserProfileLink>
+    </UserButton>
+  </template>
+  ```
+
 ## 1.1.11
 
 ### Patch Changes

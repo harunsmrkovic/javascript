@@ -1,5 +1,22 @@
 # Change Log
 
+## 2.7.7
+
+### Patch Changes
+
+- Accept custom `redirectURL` for SSO callback via `startSSOFlow` ([#5102](https://github.com/clerk/javascript/pull/5102)) by [@LauraBeatris](https://github.com/LauraBeatris)
+
+  Usage:
+
+  ```ts
+  await startSSOFlow({
+    strategy: 'oauth_google',
+    redirectUrl: AuthSession.makeRedirectUri({
+      path: 'dashboard',
+    }),
+  });
+  ```
+
 ## 2.7.6
 
 ### Patch Changes
